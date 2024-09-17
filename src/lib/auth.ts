@@ -10,7 +10,8 @@ export const userManager = new UserManager({
 	scope: 'AppFramework openid profile',
 	redirect_uri: location.origin + '/auth/callback',
 	silent_redirect_uri: location.origin + '/auth/renew',
-	post_logout_redirect_uri: location.origin
+	post_logout_redirect_uri: location.origin,
+	automaticSilentRenew: true
 });
 
 export async function initAuth() {
